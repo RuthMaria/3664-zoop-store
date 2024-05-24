@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
+
 export class SearchComponent {
 
   @Output() searchText = new EventEmitter<string>();
