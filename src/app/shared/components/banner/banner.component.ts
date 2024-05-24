@@ -9,6 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class BannerComponent {
 
-  @Input()
-  title: string = '';
+  @Input() title: string = '';
 }
