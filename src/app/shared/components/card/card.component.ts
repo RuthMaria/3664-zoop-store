@@ -16,14 +16,10 @@ import { CommonModule } from '@angular/common';
 })
 export class CardComponent {
 
-  @Input()
-  product: Product | null = null;
-
-  @Input()
-  isManagable = false;
+  @Input() product: Product | null = null;
+  @Input() isManagable = false;
 
   @Output() onDelete = new EventEmitter<Product | null>();
-
   @Output() onEdit = new EventEmitter<Product | null>();
 
   onDeleteClick(): void {
