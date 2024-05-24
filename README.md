@@ -1,3 +1,4 @@
+
 ![Descricao da sua imagem](thumbnail.png)
 
 # Zoop Store
@@ -21,7 +22,7 @@ Se liga nessa lista de tudo que usaremos nesse curso:
 
 ## 🛠️ Abrir e rodar o projeto
 
-Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `ng serve --open` para iniciar o projeto.
+Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `ng serve` para iniciar o projeto.
 
 Depois, acesse <a href="http://localhost:4200/">http://localhost:4200/</a> no seu navegador.
 
@@ -29,3 +30,4 @@ Depois, acesse <a href="http://localhost:4200/">http://localhost:4200/</a> no se
 
 A Zoop Store é um e-commerce fictícia utilizada nesse curso da Alura.
 A ideia principal desse curso é apresentar os principais conceitos de testes no ecosistema do Angular.
+
