@@ -3,15 +3,7 @@ import { By } from '@angular/platform-browser';
 
 import { Product } from '../../../types/product.inteface';
 import { CardComponent } from './card.component';
-
-const product: Product = {
-  id: 3,
-  title: 'Macbook Pro',
-  category: 'eletronics',
-  description: 'Laptop',
-  price: 2000,
-  image: 'src/macbook-pro.png'
-};
+import { productMock } from '../../../pages/manage-products/create-product/create-product.component.spec';
 
 // se quiser executar apenas o teste atual, coloque 'f' na frente de describe ou it. Ficando 'fdescribe' ou 'fit'.
 describe('CardComponent', () => {
@@ -39,7 +31,7 @@ describe('CardComponent', () => {
 
   it('deve renderizar as propriedades do produto no template', () => {
 
-    component.product = product;
+    component.product = productMock;
 
     fixture.detectChanges();
 
@@ -48,17 +40,17 @@ describe('CardComponent', () => {
     const productDescription = fixture.debugElement.query(By.css('p')).nativeElement;
     const productPrice = fixture.debugElement.query(By.css('h3')).nativeElement;
 
-    expect(productImg.src).toContain(product.image);
-    expect(productTitle.textContent).toContain(product.title);
-    expect(productDescription.textContent).toContain(product.description);
-    expect(productPrice.textContent).toContain(product.price);
+    expect(productImg.src).toContain(productMock.image);
+    expect(productTitle.textContent).toContain(productMock.title);
+    expect(productDescription.textContent).toContain(productMock.description);
+    expect(productPrice.textContent).toContain(productMock.price);
   });
 
   it('deve emitir o evento onDelete quando onDeleteClick for chamado', () => {
 
     const spy = spyOn(component.onDelete, 'emit'); // spy altera o comportamento de um método ou uma função. Ele mockou a função onDelete.
 
-    component.product = product;
+    component.product = productMock;
     component.isManagable = true;
 
     fixture.detectChanges();
@@ -67,14 +59,14 @@ describe('CardComponent', () => {
     expect(managableElement).not.toBeNull();
 
     component.onDeleteClick();
-    expect(spy).toHaveBeenCalledWith(product); // verifica se o spy chamou o emit passando o product
+    expect(spy).toHaveBeenCalledWith(productMock); // verifica se o spy chamou o emit passando o product
   });
 
   it('deve emitir o evento onEdit quando onEditClick for chamado', () => {
 
     const spy = spyOn(component.onEdit, 'emit');
 
-    component.product = product;
+    component.product = productMock;
     component.isManagable = true;
 
     fixture.detectChanges();
@@ -84,6 +76,6 @@ describe('CardComponent', () => {
 
     component.onEditClick();
 
-    expect(spy).toHaveBeenCalledWith(product);
+    expect(spy).toHaveBeenCalledWith(productMock);
   });
 });

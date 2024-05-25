@@ -17,7 +17,7 @@ import { CreateProductComponent } from './create-product.component';
 import { CreateProductApiService } from './services/create-product-api.service';
 import { CreateProductService } from './services/create-product.service';
 
-const productMock: Product = {
+export const productMock: Product = {
   id: 1,
   title: 'Produto',
   description: 'Descrição',
@@ -32,7 +32,7 @@ class MockCreateProductApiService {
   }
 }
 
-fdescribe('CreateProductComponent', () => {
+describe('CreateProductComponent', () => {
   let component: CreateProductComponent;
   let fixture: ComponentFixture<CreateProductComponent>;
   let createProductService: CreateProductService;
@@ -125,6 +125,12 @@ fdescribe('CreateProductComponent', () => {
 
     fixture.detectChanges();
 
+    /*
+    espera até que todas as tarefas assíncronas pendentes estejam concluídas.
+    Isso garante que qualquer operação assíncrona iniciada pelo método onSubmitForm
+    (como a leitura da imagem e a chamada ao método save) esteja completa antes de
+    proceder.
+    */
     fixture.whenStable().then(() => {
       expect(createProductService.save).toHaveBeenCalled();
     });
