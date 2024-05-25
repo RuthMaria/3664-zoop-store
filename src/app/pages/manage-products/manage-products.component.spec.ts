@@ -34,7 +34,7 @@ const storageServiceMock = {
   }
 };
 
-fdescribe('ManageProductsComponent', () => {
+describe('ManageProductsComponent', () => {
   let component: ManageProductsComponent;
   let fixture: ComponentFixture<ManageProductsComponent>;
 
