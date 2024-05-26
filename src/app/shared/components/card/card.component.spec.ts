@@ -43,12 +43,12 @@ describe('CardComponent', () => {
     expect(productImg.src).toContain(productMock.image);
     expect(productTitle.textContent).toContain(productMock.title);
     expect(productDescription.textContent).toContain(productMock.description);
-    expect(productPrice.textContent).toContain(productMock.price);
+    expect(productPrice.textContent).toContain(`R$ ${productMock.price}`);
   });
 
   it('deve emitir o evento onDelete quando onDeleteClick for chamado', () => {
 
-    const spy = spyOn(component.onDelete, 'emit'); // spy altera o comportamento de um método ou uma função. Ele mockou a função onDelete.
+    const spy = jest.spyOn(component.onDelete, 'emit'); // spy altera o comportamento de um método ou uma função. Ele mockou a função onDelete.
 
     component.product = productMock;
     component.isManagable = true;
@@ -64,7 +64,7 @@ describe('CardComponent', () => {
 
   it('deve emitir o evento onEdit quando onEditClick for chamado', () => {
 
-    const spy = spyOn(component.onEdit, 'emit');
+    const spy = jest.spyOn(component.onEdit, 'emit');
 
     component.product = productMock;
     component.isManagable = true;

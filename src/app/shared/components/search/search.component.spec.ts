@@ -30,7 +30,7 @@ describe('SearchComponent', () => {
     const value = 'iPhone 15';
     const event = { target: { value } } as unknown as Event;
 
-    const spy = spyOn(component.searchText, 'emit');
+    const spy = jest.spyOn(component.searchText, 'emit');
 
     component.onInputChange(event);
     expect(spy).toHaveBeenCalledWith(value);

@@ -60,13 +60,12 @@ describe('ManageProductsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ManageProductsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('deve abrir o diálogo de criação de produto ao chamar onSubscribeProduct', () => {
     component.onSubscribeProduct();
 
-    spyOn(component.dialogRef as any, 'afterClosed').and.returnValue(of({}))
+    jest.spyOn(component.dialogRef as any, 'afterClosed').mockReturnValue(of({}))
 
     component.dialogRef.close();
 
@@ -74,7 +73,7 @@ describe('ManageProductsComponent', () => {
   });
 
   it('deve deletar o produto ao chamar onDelete', () => {
-    spyOn(window, 'confirm').and.returnValue(true);
+    jest.spyOn(window, 'confirm').mockReturnValue(true);
 
     component.onDelete(productMock);
 
@@ -101,7 +100,7 @@ describe('ManageProductsComponent', () => {
   it('deve abrir o diálogo de edição de produto ao chamar onEdit', () => {
     component.onEdit(productMock);
 
-    spyOn(component.dialogRef as any, 'afterClosed').and.returnValue(of({}));
+    jest.spyOn(component.dialogRef as any, 'afterClosed').mockReturnValue(of({}));
 
     component.dialogRef.close();
 

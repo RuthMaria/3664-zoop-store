@@ -38,7 +38,7 @@ describe('CreateProductComponent', () => {
   let createProductService: CreateProductService;
 
   const dialogRefMock = {
-    close: jasmine.createSpy('close')
+    close: jest.fn()
   };
 
   beforeEach(waitForAsync(() => {
@@ -111,7 +111,7 @@ describe('CreateProductComponent', () => {
   });
 
   it('deve chamar o método save do createProductService ao enviar o formulário', () => {
-    spyOn(createProductService, 'save').and.returnValue(Promise.resolve());
+    jest.spyOn(createProductService, 'save').mockReturnValue(Promise.resolve());
 
     const event = {
       target: {
