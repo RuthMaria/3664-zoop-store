@@ -1,33 +1,100 @@
-
 ![Descricao da sua imagem](thumbnail.png)
 
-# Zoop Store
+<p align="center">
+  <a href="#about">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
+  <a href="#technologies">Tecnologias usadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;
+  <a href="#preview">Prévia</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rodar">Como rodar os testes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">Licença</a>
+</p>
 
-Zoop Store é um e-commerce recheiado de produtos de diversas verdentes.
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=04d361&labelColor=000000" alt="PRs welcome!" />
 
-## 🔨 Funcionalidades do projeto
+  <img alt="License" src="https://img.shields.io/badge/Made%20by-Ruth%20Maria-%2304D361">
+
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=04d361&labelColor=000000">
+</p>
+
+<a id="about"></a>
+
+## :books: Sobre
+
+Zoop Store é um e-commerce recheado de produtos de diversas verdentes.
 
 O App oferece uma prática lista de produtos, apresentando detalhes como título, valor, descrição e imagem para uma visualização completa. Além disso, proporciona a conveniência de gerenciar esses produtos, permitindo operações como cadastro, remoção e atualização. Vale ressaltar que as informações do aplicativo são armazenadas localmente no navegador, o que significa que serão perdidas ao fechar o aplicativo.
 
-O [Figma dessa aplicação você encontra aqui](https://www.figma.com/file/ghzMuGeV2n1ninpw2HaMCg/Dominando-Testes-em-Angular?type=design&node-id=9-457&mode=design&t=TuxafGqTTi1CWk5i-0).
+A Zoop Store é um e-commerce fictícia utilizada no curso de testes da Alura.
+A ideia principal do curso é apresentar os principais conceitos de testes no ecossistema do Angular.
 
-## ✔️ Técnicas e tecnologias utilizadas
+<a id="technologies"></a><br>
 
-Se liga nessa lista de tudo que usaremos nesse curso:
+## ⚒️ Tecnologias usadas
 
-- `Angular`
-- `Angular CLI`
-- `Angular Material`
-- `Figma`
+- HTML
+- CSS
+- Uuid
+- Karma
+- Jasmine
+- Angular
+- Typescript
+- Angular Material
 
-## 🛠️ Abrir e rodar o projeto
+<a id="preview"></a><br>
 
-Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `ng serve` para iniciar o projeto.
+## :tv: Prévia
 
-Depois, acesse <a href="http://localhost:4200/">http://localhost:4200/</a> no seu navegador.
+- Projeto
+  ![video](./src/assets/videos/projeto.gif)
 
-## 📚 Mais informações do curso
+- Testes
+  <img alt="Logo ignitte" src="./src/assets/videos/testes.gif"/>
 
-A Zoop Store é um e-commerce fictícia utilizada nesse curso da Alura.
-A ideia principal desse curso é apresentar os principais conceitos de testes no ecosistema do Angular.
+- Cobertura no coverage
+  <img alt="Logo ignitte" src="./src/assets/images/coverage.png"/>
 
+<a id="rodar"></a><br>
+
+## 🚀 Como rodar os testes
+
+- Clone este repositório
+
+```
+git clone https://github.com/RuthMaria/ng-test2.git
+```
+
+- Instalar as dependêncies
+
+```
+npm install
+```
+
+- Rodar o projeto
+
+```
+npm run start
+```
+
+- Rodar os testes
+
+```
+npm run test
+```
+
+- Rodar a cobertura do coverage; em seguida abrir o arquivo index.html da pasta coverage
+
+```
+npm run coverage
+```
+
+<a id="license"></a><br>
+
+## :memo: Licença
+
+Este projeto está sob licença do MIT. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
+
+---
+
+<h4 align="center">
+    Desenvolvido com ❤️ por <a href="https://www.linkedin.com/in/ruth-maria-9b256071/" target="_blank">Ruth Maria</a>
+</h4>
